@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Responsive image gallery created for CodeAlpha Internship Task 1.">
+  <title>Image Gallery | CodeAlpha Task 1</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">Pixel<span>Gallery</span></a>
+      <span class="task-label">CODEALPHA · TASK 01</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="intro">
+      <p class="eyebrow">EXPLORE THE COLLECTION</p>
+      <h1>Every picture tells <span>a story.</span></h1>
+      <p class="intro-text">
+        A responsive image gallery built with HTML, CSS and JavaScript.
+        Explore photographs, filter categories and open images in full view.
+      </p>
+    </section>
+
+    <section class="gallery-section" aria-label="Image gallery">
+
+      <div class="gallery-toolbar">
+        <div>
+          <h2>Image Gallery</h2>
+          <p id="imageCount" aria-live="polite">Loading images...</p>
+        </div>
+
+        <div class="filters" aria-label="Filter by category">
+          <button class="filter-btn active" data-filter="all"
+            aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="nature"
+            aria-pressed="false">Nature</button>
+          <button class="filter-btn" data-filter="architecture"
+            aria-pressed="false">Architecture</button>
+          <button class="filter-btn" data-filter="lifestyle"
+            aria-pressed="false">Lifestyle</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <article class="gallery-card" data-category="nature">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open mountain lake photograph">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=80"
+              alt="Mountain lake surrounded by green hills" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Mountain Escape</h3>
+            <span>Nature</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="architecture">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open architecture photograph">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=700&q=80"
+              alt="Modern architectural design and geometric lines" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Modern Lines</h3>
+            <span>Architecture</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="lifestyle">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open coffee shop photograph">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=700&q=80"
+              alt="Warm and cozy coffee shop interior" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Slow Mornings</h3>
+            <span>Lifestyle</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open forest photograph">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+              alt="Sunlight shining through a lush green forest" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Into the Forest</h3>
+            <span>Nature</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="architecture">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open minimalist building photograph">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=80"
+              alt="Minimalist white contemporary building" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Minimal Living</h3>
+            <span>Architecture</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="lifestyle">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open fashion photograph">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
+              alt="Neutral-toned fashion and lifestyle collection" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Everyday Style</h3>
+            <span>Lifestyle</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open landscape photograph">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+              alt="Scenic natural landscape" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Open Horizons</h3>
+            <span>Nature</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="lifestyle">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open coffee photograph">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
+              alt="Freshly prepared coffee" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Coffee Moments</h3>
+            <span>Lifestyle</span>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="architecture">
+          <button class="image-button"
+            data-full="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=85"
+            aria-label="Open architectural detail photograph">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=700&q=80"
+              alt="Architectural detail in a modern building" loading="lazy">
+            <span class="image-overlay"><span>View Image ↗</span></span>
+          </button>
+          <div class="card-info">
+            <h3>Urban Details</h3>
+            <span>Architecture</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CodeAlpha Internship · Task 1: Image Gallery</p>
+    <p>Designed with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox"
+    role="dialog" aria-modal="true"
+    aria-label="Image preview" aria-hidden="true">
+
+    <button class="close-btn" id="closeLightbox"
+      aria-label="Close image viewer">&times;</button>
+
+    <button class="nav-btn prev-btn" id="prevImage"
+      aria-label="Previous image">&#10094;</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <p id="lightboxCaption"></p>
+      <p id="lightboxCounter"></p>
+    </div>
+
+    <button class="nav-btn next-btn" id="nextImage"
+      aria-label="Next image">&#10095;</button>
+  </div>
+
+</body>
+</html>
